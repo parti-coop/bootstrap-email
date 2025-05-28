@@ -1,3 +1,5 @@
+@use './selectors_for_utils' as *;
+
 @mixin padding-group($prefix, $size, $value) {
   @include padding-util('.p-#{$prefix}#{$size}') {
     padding: $value;

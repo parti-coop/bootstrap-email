@@ -1,3 +1,5 @@
+@use "./variables/typography" as *;
+
 // Force base font in Outlook
 body, table, td {
   font-family: $font-family-base !important;

@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 $border-color:       $gray-300 !default;
 $border-width:       1px !default;
 $border-radius-sm:   3px !default;
