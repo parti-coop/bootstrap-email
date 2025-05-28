@@ -1,8 +1,14 @@
 //
 // This file will be placed in the head of the document and will not be inlined
 //
-@import 'scss/helpers';
-@import 'scss/variables';
+@use "sass:string";
+@use 'scss/helpers/selectors_for_utils' as *;
+@use 'scss/helpers/mixins' as *;
+@use 'scss/variables';
+@use 'scss/reboot_head';
+@use 'scss/variables/typography' as *;
+@use 'scss/variables/utilities' as *;
+
 
 @if $font-faces {
   @each $font-face in $font-faces {
@@ -15,8 +21,6 @@
     }
   }
 }
-
-@import 'scss/reboot_head';
 
 /*! allow_purge_after */
 
@@ -145,12 +149,12 @@
   // Spacing
   // Reset large padding to 0 on small device
   @each $size, $value in $spacers {
-    @include padding-group('lg-', $size, unquote('0 !important'));
+    @include padding-group('lg-', $size, string.unquote('0 !important'));
   }
 
   // Set proper padding on small devices
   @each $size, $value in $spacers {
-    @include padding-group('', $size, unquote('#{$value} !important'));
+    @include padding-group('', $size, string.unquote('#{$value} !important'));
   }
 
   // Spacers

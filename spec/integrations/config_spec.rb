@@ -12,7 +12,7 @@ describe 'BootstrapEmail::Compiler#perform_full_compile' do
       // Override primary color to black
       $primary: #000000;
 
-      //= @import bootstrap-email;
+      //= @use bootstrap-email;
     SCSS
 
     output1 = BootstrapEmail::Compiler.new(html).perform_full_compile
