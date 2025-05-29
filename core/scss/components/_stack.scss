@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 @each $space, $value in $spacers {
   table.stack-row.gap-#{$space},
   table.stack-row.gap-lg-#{$space} {

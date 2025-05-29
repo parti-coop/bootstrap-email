@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../helpers' as *;
+
 @each $prefix in $breakpoints {
   @each $name, $property in $sizing-types {
     @include sizing-util('.max-#{$name}-#{$prefix}full') {

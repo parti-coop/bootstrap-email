@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../helpers' as *;
+
 @each $name, $color in $all-colors {
   @include color-util('.text-#{$name}') {
     color: $color;

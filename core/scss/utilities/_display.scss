@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 @each $prefix in $breakpoints {
   @each $display in $display-type {
     .d-#{$prefix}#{$display} {

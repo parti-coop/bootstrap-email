@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .row {
   margin-right: -24px;
   & > table {
