@@ -1,3 +1,6 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
 @each $name, $radius in $border-radiuses {
   @include border-radius-util('.rounded#{$name}') {
     border-radius: $radius;

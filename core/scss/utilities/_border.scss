@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../helpers' as *;
+
 @each $name, $width in $border-widths {
   .border#{$name}         { border: $width solid $border-color !important; }
   .border-top#{$name}     { border-top: $width solid $border-color !important; }

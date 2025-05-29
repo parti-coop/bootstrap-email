@@ -2,13 +2,11 @@
 // This file will be placed in the head of the document and will not be inlined
 //
 @use "sass:string";
-@use 'scss/helpers/selectors_for_utils' as *;
-@use 'scss/helpers/mixins' as *;
-@use 'scss/variables';
-@use 'scss/reboot_head';
-@use 'scss/variables/typography' as *;
-@use 'scss/variables/utilities' as *;
 
+@use 'scss/helpers' as *;
+@use 'scss/variables' as *;
+
+@use 'scss/reboot_head';
 
 @if $font-faces {
   @each $font-face in $font-faces {

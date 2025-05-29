@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../helpers' as *;
+
 @each $name, $color in $all-colors {
   @include background-color-util('.bg-#{$name}') {
     background-color: $color;

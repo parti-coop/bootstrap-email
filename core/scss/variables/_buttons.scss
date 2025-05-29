@@ -1,7 +1,7 @@
 @use "sass:map";
-@use "./typography" as *;
-@use "./borders" as *;
-@use "./colors" as *;
+@use "typography" as *;
+@use "borders" as *;
+@use "colors" as *;
 
 $btn-padding-y:               8px !default;
 $btn-padding-x:               12px !default;

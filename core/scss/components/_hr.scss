@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 table.hr {
   width: 100%;
   & > tbody > tr > td {

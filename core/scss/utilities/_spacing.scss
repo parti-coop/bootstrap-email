@@ -1,4 +1,7 @@
 // Padding Util
+@use '../variables' as *;
+@use '../helpers' as *;
+
 @each $prefix in $breakpoints {
   @each $size, $value in $spacers {
     @include padding-group($prefix, $size, $value);
