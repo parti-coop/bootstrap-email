@@ -44,7 +44,9 @@ module BootstrapEmail
     end
 
     def replace_config(sass_config)
-      sass_config.gsub("//= @include #{type};", "@use '#{type}';")
+      sass_config.gsub("//=@include #{type}", "@use '#{type}'\;")
+        .gsub("//=@begin #{type}", "@use '#{type}' with (")
+        .gsub("//=@end", ")\;")
     end
 
     def checksum_files
