@@ -1,16 +1,16 @@
-@use '../variables' as *;
-@use '../helpers' as *;
+@use "../helper";
+@use "../variable";
 
-@each $name, $width in $border-widths {
-  .border#{$name}         { border: $width solid $border-color !important; }
-  .border-top#{$name}     { border-top: $width solid $border-color !important; }
-  .border-right#{$name}   { border-right: $width solid $border-color !important; }
-  .border-bottom#{$name}  { border-bottom: $width solid $border-color !important; }
-  .border-left#{$name}    { border-left: $width solid $border-color !important; }
+@each $name, $width in variable.$border-widths {
+  .border#{$name}         { border: $width solid helper.hex(variable.$border-color) !important; }
+  .border-top#{$name}     { border-top: $width solid helper.hex(variable.$border-color) !important; }
+  .border-right#{$name}   { border-right: $width solid helper.hex(variable.$border-color) !important; }
+  .border-bottom#{$name}  { border-bottom: $width solid helper.hex(variable.$border-color) !important; }
+  .border-left#{$name}    { border-left: $width solid helper.hex(variable.$border-color) !important; }
 }
 
-@each $name, $color in $all-colors {
-  @include border-color-util('.border-#{$name}') {
-    border-color: $color !important;
+@each $name, $color in variable.$all-colors {
+  @include helper.border-color-util('.border-#{$name}') {
+    border-color: helper.hex($color) !important;
   }
 }

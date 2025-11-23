@@ -1,26 +1,26 @@
 @use "sass:color";
-
-@use '../helpers' as *;
-@use '../variables' as *;
+@use "../variable";
+@use "../helper";
 
 .alert {
   border-collapse: separate !important;
   border: 0;
   width: 100%;
   & > tbody > tr > td {
-    padding: 0.75 * $font-size-base 1.25 * $font-size-base;
-    border: 1px solid transparent;
-    border-radius: 0.25 * $font-size-base;
+    padding: 0.75 * variable.$font-size-base 1.25 * variable.$font-size-base;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.25 * variable.$font-size-base;
   }
 }
 
-@each $color, $value in $theme-colors {
+@each $color, $value in variable.$theme-colors {
   .alert-#{$color} td {
-    background-color: color.adjust($value, $lightness: 40%);
-    border-color: color.adjust($value, $lightness: 35%);
-    color: color.adjust($value, $lightness: -30%);
+    background-color: helper.hex(helper.tint-color($value, 85%));
+    border-color: helper.hex(helper.tint-color($value, 75%));
+    color: helper.hex(helper.shade-color($value, 65%));
     .hr > table > tbody > tr > td {
-      border-top: 1px solid color.adjust($value, $lightness: 35%);
+      border-top: 1px solid helper.hex(helper.tint-color($value, 35%));
     }
   }
 }

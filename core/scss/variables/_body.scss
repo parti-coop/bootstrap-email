@@ -1,4 +1,4 @@
-@use "colors" as *;
+@use "colors";
 
-$body-color: $black !default;
-$body-bg: $white !default;
+$body-color: colors.$black !default;
+$body-bg: colors.$white !default;
